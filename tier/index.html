@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What's My Tier?</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="../whatsmytier/index.css">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	background: black;
+	font-family: system-ui;
+	font-size: 20px;
+	color: white
+	}
+* {
+  box-sizing: border-box;
+}
+div {
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#myInput {
+  background-image: url('/tier/search.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  background-color: black;
+  color: white;
+}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100;
+  border: 0px solid #181818;
+  font-size: 18px;
+  border-radius: 10px;
+}
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+  max-width:240px
+}
+#myTable tr {
+  border-bottom: 2px solid #414141;
+}
+#myTable tr.header,{
+  background-color: #080808;
+}
+h1 {
+  margin-bottom:30;
+  text-align:center;
+  }
+.collapsible {
+  color: #fff;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 0px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+.content {
+  padding: 0 1px;
+  background-color: #282828;
+  max-height: 0;
+  max-width: 240px;
+  overflow-x: auto;
+  transition: max-height 0.2s ease-out;
+}
+.alert {
+  background-color: #303030;
+  color: white;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}
+button.rainbow {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.rainbow{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+p.rainbow{
+    padding: 0px;
+    margin: 0px;
+}
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+</style>
+</head>
+<body>
+    <h1>The Tier List</h1>
+<div>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Click a name to learn more about them!
+</div>
+<table id="myTable" style="white-space:nowrap;">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Tier</th>
+    </tr>
+	
+<!--TABLE START-->
+
+<tr><td><button type="button" class="collapsible">[My Headhunter Collection]</button><div class="content"><p><a href=/tier/headhunters>View them all.</a></p></div></td><td style="color:#8DEEEE;">S</td></tr> <tr><td><button type="button" class="collapsible">James [TheGoodDude22]</button><div class="content"><p>My mom says I’m cool.</p></div></td><td style="color:#8DEEEE;">S</td></tr> <tr><td><button type="button" class="collapsible">Holden [sSHADOWw5]</button><div class="content"><p>He pretends I’m wanted.</p></div></td><td style="color:#B8FF75;">A 1/2</td></tr> <tr><td><button type="button" class="collapsible">Alex [Yinfinity0918#9418]</button><div class="content"><p>He can pretend he’s Russian and that’s pretty neat.</p></div></td><td style="color:#B9FFB7;">A</td></tr> <tr><td><button type="button" class="collapsible">Ben [BossBlaster567]</button><div class="content"><p>He keeps me company at 3AM.</p></div></td><td style="color:#B9FFB7;">A</td></tr> <tr><td><button type="button" class="collapsible">[DUSTED DRUNK]</button><div class="content"><p>He supports the bees!</p></div></td><td style="color:#B9FFB7;">A</td></tr> <tr><td><button type="button" class="collapsible">Jonathan [Burhomad]</button><div class="content"><p>Robots are cool. So is he.</p></div></td><td style="color:#B9FFB7;">A</td></tr> <tr><td><button type="button" class="collapsible">Zach [BaconMaster2023]</button><div class="content"><p>🧐</p></div></td><td style="color:#B9FFB7;">Z</td></tr> <tr><td><button type="button" class="collapsible">Abhinu [InfiniteTrain59]</button><div class="content"><p>He thinks it doesn’t matter if bees die.</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible">Caiden [DraconnicVortex]</button><div class="content"><p>🐿</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible">Carson [Deerslayer1556]</button><div class="content"><p>hAhA sHoRt</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible">Jeremy [BigPappa Branch]</button><div class="content"><p>When he says big he’s not lying.</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible">Jeremiah [BossBlaster567]</button><div class="content"><p>c o m p u t a h   o n   w h e a l s</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible">Porter [ProGamingPirate]</button><div class="content"><p>At least he tries.</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible">[Slimjaceman09]</button><div class="content"><p>Voice makes me want to kill myself but otherwise ok.</p></div></td><td style="color:#FF9B72;">B</td></tr> <tr><td><button type="button" class="collapsible rainbow"><p class="rainbow">[Midnight#9512]</p></button><div class="content"><p>HE DOESN’T WASH HIS HANDS WHEN HE TAKES A PISS WITH HIS TINY WIENER</p></div></td><td style="color:#E84855;">C</td></tr> <tr><td><button type="button" class="collapsible">Yug [MCPE205]</button><div class="content"><p>generic bill cosby joke here</p></div></td><td style="color:#7D2500;">brown</td></tr>
+	
+<!--TABLE STOP-->
+	
+</table>
+</div>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
